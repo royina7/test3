@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>For You</title>
+   
+  </head>
+  <body>
+      
+      <div class="container">
+             <h1>A Video Player For My Love❤️</h1>
+             <div class="shape">
+                 <div class="heart1"></div>
+                 </div>
+        <div class="row">
+          <div class="col">
+            <div class="feature-img">
+              <img src="1703076577529.jpg" width="100%"/>
+              <img src="play.png" class="play-btn" onclick="playVideo('lv_0_20240315204429.mp4')"/>
+            </div>
+             
+          </div>
+          <div class="col">
+            <div class="small-img-row">
+              <div class="small-img">
+                <img src="1701584029835.jpg"/>
+                <img src="play.png" class="play-btn" onclick="playVideo('Mailetimlai.mp4')"/>
+              </div>
+              <p>I know things are tough right now, but I want you to know that I'm still here, waiting for you. Whenever you're ready, <br> I'll be waiting with open arms. Take your time, and remember that I care about you deeply.🫶🏼</p>
+            </div>
+             <div class="small-img-row">
+              <div class="small-img">
+                <img src="IMG_20240315_233632.jpg"/>
+                <img src="play.png" class="play-btn" onclick="playVideo('iloveyou.mp4')"/>
+              </div>
+              <p>I Love You Baby❤️</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="video-player" id="videoPlayer">
+         <video width="100%" controls autoplay id="myVideo">
+           <source src="lv_0_20240315204429.mp4" type="video/mp4">
+         </video>
+         <img src="close.png" class="close-btn" onclick="stopVideo()"/>
+      </div>
+
+
+      
+      
+      
+      <script>
+          var videoPlayer = document.getElementById("videoPlayer");
+         var myVideo = document.getElementById("myVideo");
+         
+         
+         function stopVideo(){
+           videoPlayer.style.display = "none";
+           myVideo.pause();
+         }
+         
+         function playVideo(file){
+           myVideo.src = file;
+           videoPlayer.style.display = "block";
+           myVideo.play();
+          
+         }
+        
+         
+           function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+  heart.innerText = "💜";
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+
+setInterval(createHeart, 300);
+  
+
+      
+      </script>
+      
+      
+  </body>
+</html>
